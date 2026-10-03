@@ -22,8 +22,7 @@
             <!-- PACE team logo -->
             <div class="brand">
                 <a href="index.html">
-                    <img src="images/PACE_Logo.png"
-                         alt="PACE Team Logo">
+                    <img src="images/PACE_Logo.png" alt="PACE Team Logo">
                 </a>
             </div>
 
@@ -35,12 +34,12 @@
                 <a href="technologies.html">Technologies</a>
                 <a href="progress.html">Progress</a>
                 <a href="more.html">More</a>
-
+                <a href="https://naufsae.wordpress.com/">NAU FSAE Home</a>
             </div>
 
         </nav>
     </header>
-    
+
 
 
     <!-- main -->
@@ -56,11 +55,7 @@
                 <h2>Our Project</h2>
 
                 <p>
-                    PACE is developing a real-time computing and telemetry
-                    system for Northern Arizona University's Formula SAE
-                    vehicle. The system will collect vehicle data, process
-                    that information, and make important performance data
-                    available to the driver and team.
+                    PACE is developing a real-time computing and telemetry system for Northern Arizona University's Formula SAE vehicle. The system will collect vehicle data, process that information, and make important performance data available to the driver and team.
                 </p>
 
             </div>
@@ -74,19 +69,32 @@
 
                 <!--the problem of the project-->
                 <div class="details">
-                    <p class="section-label">THE PROBLEM</p>
-                    <h2>Real-Time Vehicle Data</h2>
+                    <p class="section-label">High-level requirements</p>
+                    <h2>Project Goals</h2>
 
-                    <p>
-                        The Formula SAE vehicle is equipped with a
-                        Controller Area Network (CAN) bus, which allows
-                        different electronic components of the car to
-                        communicate with each other. However, the team
-                        currently lacks a system that can effectively
-                        interface with the CAN bus and provide real-time
-                        data to the driver and team.
+                    <p>By the end of this year, we have three main goals we want to achieve:
+
+                        <ul>
+                            <li>Implementation of custom CAN bus protocol library using ECU documentation.</li>
+                            <li>Deployment of a docker container on a Raspberry Pi to pull data from the ECU.</li>
+                            <li>Formulation of a tablet dashboard display installable to the vehicle using PyQT framework, pulling data from minicomputer at a latency of less than 20ms. Displays RPM, MPH, fuel, engine temperature, oil temp.</li>
+
+                        </ul>
+
                     </p>
 
+                    <h2>Stretch Goals</h2>
+
+                    <p>Some stretch goals we hope to achieve for this project are as follows:
+
+                        <ul>
+                            <li>Build network software for telemetry systems to transmit and receive live sensor data for engineers in the pit.</li>
+                            <li>Write a C++ library for GPS processing and tracking, and transmit data to remote radio modules for lap analysis through custom lap analysis software.</li>
+                            <li>Safety system - Sensor polling module to emergency stop the engine if detected internal temperature can damage components.</li>
+
+                        </ul>
+
+                    </p>
                 </div>
 
                 <!--proposed solution-->
@@ -94,44 +102,22 @@
                     <p class="section-label">THE PROPOSED SOLUTION</p>
                     <h2>Connecting to the Car</h2>
 
-                        <p>
-                            The PACE system is designed to address this problem by
-                            providing a real-time computing and telemetry solution
-                            for the Formula SAE vehicle. The system will interface
-                            with the car's CAN bus, collect and process vehicle data,
-                            and display important information to the driver through
-                            a dashboard interface.
-                        </p>
+                    <p>
+                        The PACE system is designed to address this problem by providing a real-time computing and telemetry solution for the Formula SAE vehicle. The system will interface with the car's CAN bus, collect and process vehicle data, and display important information
+                        to the driver through a dashboard interface.
+                    </p>
                 </div>
 
-                <!--product being developed-->
-                <div class="details">
-                    <p class="section-label">THE PROPOSED SOLUTION</p>
-                    <h2>Connecting to the Car</h2>
-
-                        <p>
-                            The PACE system is designed to address this problem by
-                            providing a real-time computing and telemetry solution
-                            for the Formula SAE vehicle. The system will interface
-                            with the car's CAN bus, collect and process vehicle data,
-                            and display important information to the driver through
-                            a dashboard interface.
-                        </p>
-                </div>
 
                 <!-- product development and impact -->
                 <div class="details">
                     <p class="section-label">THE PRODUCT</p>
                     <h2>From Data to Decisions</h2>
 
-                        <p>
-                            The finished PACE system will provide the Formula SAE team 
-                            with a powerful tool for monitoring and optimizing vehicle performance. 
-                            By collecting and analyzing real-time data, the team can make informed 
-                            decisions that improve the car's performance on the track. The system 
-                            will also enhance the driver's experience by providing them with 
-                            critical information about the car's status and performance.
-                        </p>
+                    <p>
+                        The finished PACE system will provide the Formula SAE team with a powerful tool for monitoring and optimizing vehicle performance. By collecting and analyzing real-time data, the team can make informed decisions that improve the car's performance on the
+                        track. The system will also enhance the driver's experience by providing them with critical information about the car's status and performance.
+                    </p>
                 </div>
             </div>
 
@@ -148,8 +134,7 @@
                 <h2>High-Level Requirements</h2>
 
                 <p class="requirements-intro">
-                    The PACE system is being developed around several core
-                    requirements that define what the final system should accomplish.
+                    The PACE system is being developed around several core requirements that define what the final system should accomplish.
                 </p>
 
                 <div class="requirements-list">
@@ -157,8 +142,7 @@
                     <div class="requirement">
                         <span>01</span>
                         <p>
-                            Communicate with the vehicle's ECU through the
-                            CAN bus protocol.
+                            Communicate with the vehicle's ECU through the CAN bus protocol.
                         </p>
                     </div>
 
@@ -172,8 +156,7 @@
                     <div class="requirement">
                         <span>03</span>
                         <p>
-                            Display important vehicle information through a
-                            real-time driver dashboard.
+                            Display important vehicle information through a real-time driver dashboard.
                         </p>
                     </div>
 
@@ -193,9 +176,7 @@
                 <h2>How We're Building It</h2>
 
                 <p class="development-intro">
-                    Development of the PACE system will progress through four
-                    main stages, from initial research and design through final
-                    integration and testing.
+                    Development of the PACE system will progress through four main stages, from initial research and design through final integration and testing.
                 </p>
 
                 <!-- main stages of the development process -->
@@ -205,8 +186,7 @@
                         <span>01</span>
                         <h3>Research & Design</h3>
                         <p>
-                            Define system requirements and plan the hardware
-                            and software architecture.
+                            Define system requirements and plan the hardware and software architecture.
                         </p>
                     </div>
 
@@ -214,8 +194,7 @@
                         <span>02</span>
                         <h3>Develop</h3>
                         <p>
-                            Build the software needed to collect, process,
-                            and display vehicle data.
+                            Build the software needed to collect, process, and display vehicle data.
                         </p>
                     </div>
 
@@ -223,8 +202,7 @@
                         <span>03</span>
                         <h3>Integrate</h3>
                         <p>
-                            Connect the software with the vehicle hardware
-                            and communication systems.
+                            Connect the software with the vehicle hardware and communication systems.
                         </p>
                     </div>
 
@@ -232,8 +210,7 @@
                         <span>04</span>
                         <h3>Test</h3>
                         <p>
-                            Test the complete system and improve its
-                            reliability and performance.
+                            Test the complete system and improve its reliability and performance.
                         </p>
                     </div>
 
@@ -254,11 +231,8 @@
                 <h2>Envisioned Solution</h2>
 
                 <p class="solution-description">
-                    The PACE system will connect several hardware and software
-                    components to move information from the Formula SAE vehicle
-                    to the driver and team. Vehicle data will be collected from
-                    the ECU through the CAN bus, processed by the onboard computing
-                    system, and presented through a real-time dashboard.
+                    The PACE system will connect several hardware and software components to move information from the Formula SAE vehicle to the driver and team. Vehicle data will be collected from the ECU through the CAN bus, processed by the onboard computing system,
+                    and presented through a real-time dashboard.
                 </p>
 
                 <!-- System architecture diagram will be added as the project develops -->
