@@ -1,0 +1,1250 @@
+/* ---------------global styles------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+/* main styling page */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0d;
+    color: white;
+}
+
+/*  page content is centered and away from browser edges */
+.page-container {
+    width: 82%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* small gold labes used throughout web */
+.section-label {
+    margin: 0 0 10px;
+    color: #ffc72c;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* -------------- HEADER -------------- */
+
+/* main header background and gold accent line */
+header {
+    background-color: #0b0b0d;
+    border-bottom: 2px solid #ffc72c;
+}
+
+
+.navbar {
+    min-height: 80px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------------- PACE LOGO ----------------- */
+/* size of PACE logo in the navigation bar */
+.brand img {
+    display: block;
+    width: 110px;
+    height: auto;
+}   
+
+
+/* ==================== NAV TABS ==================== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* styling navigation links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* smooth color change when hovering */
+    transition: color 0.2s ease;
+}
+
+/* changes nav links to gold when hovered */
+.nav-links a:hover {
+    color: #ffc72c;
+}
+
+/* ----------------- Main Page Section ---------------- */
+/*  Formula SAE car as the background */
+.hero {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 70px 5%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/overview_pic.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* centers main project tagline */
+.hero-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* large PACE tagline displayed on the homepage */
+.hero-content h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 650;
+    font-style: italic;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* centers words and allows them to wrap to the next line */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-content h2 span {
+    display: inline-block;
+}
+
+/* gold  "Automotive" */
+.hero-content h2 .accent {
+    color: #ffc72c;
+}
+
+
+/* --------------- MEDIA DESIGN --------------- */
+
+/* adjusts layout for smaller screens */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Reduces spacing around the hero section */
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .development-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* displays tech cards in two columns on smaller screens */
+    .technology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .links-grid {
+    grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---------------- FORMULA SAE SECTION ------------------ */
+.fsae-intro {
+    padding: 70px 0;
+    background-color: #032749;
+}
+
+/*  keeps FSAE content centered  */
+.fsae-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* main FSAE heading */
+.fsae-content h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* FSAE description */
+.fsae-content p:last-child {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: #c7c7c7;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ------------- OUR CAR -------------- */
+
+.car-section {
+    padding: 65px 0;
+    background-color: #0b0b0d;
+}
+
+/* car image beside the description */
+.car-layout {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.car-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-bottom: 4px solid #003466;
+}
+
+.car-content {
+    text-align: left;
+}
+
+.car-content h2 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.car-content p:last-child {
+    max-width: 550px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+/* -------------- PACE INTRO SECTION -------------- */
+
+/* blue section introducing viewers  to the PACE project */
+.project-intro {
+    background-color: #032749;
+    padding: 90px 5%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.project-intro-content {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+/* main heading for the project section */
+.project-intro h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* description of the PACE project */
+.project-description {
+    max-width: 750px;
+    margin: 0 auto 35px;
+
+    color: #f0f0f0;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* -----------------HOME TEAM ----------------- */
+
+.home-team {
+    padding: 80px 0 90px;
+    background-color: #0b0b0d;
+}
+
+.home-team h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.home-team-intro {
+    max-width: 700px;
+    margin: 0 0 40px;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+
+/* team member summary */
+.home-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 950px;
+
+    border-top: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.home-team-member {
+    padding: 25px 25px 25px 0;
+}
+
+.home-team-member p,
+.home-support p {
+    margin: 0 0 8px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-team-member h3,
+.home-support h3 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+/* mentor and sponsor info */
+.home-support {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 950px;
+
+    margin-top: 30px;
+    gap: 30px;
+}
+
+/* link to full TEAM page */
+.home-team-link {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    color: #ffc72c;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+}
+
+.home-team-link:hover {
+    text-decoration: underline;
+}
+
+/* ------------- Project Page -------------- */
+
+/* main area containing project problem, solution, and product */
+.project-description-section {
+    padding: 40px 0 80px;
+    background-color: #0b0b0d;
+}
+
+/* creates separation between each part of the project description */
+.details {
+    padding: 55px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+/* remove unnecessary spacing above the first section */
+.details:first-child {
+    padding-top: 0;
+}
+
+/* heading for each project description section */
+.details h2 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 900;
+}
+
+.details p:last-child {
+    max-width: 800px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ---------------- HIGH-LEVEL REQUIREMENTS ---------------- */
+
+/* main requirements section */
+.requirements-section {
+    padding: 70px 0;
+    background-color: #032749;
+}
+
+/* requirements heading */
+.requirements-section h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+/* short intro above the requirements */
+.requirements-intro {
+    max-width: 800px;
+    margin: 0 0 45px;
+
+    color: #f0f0f0;
+
+    line-height: 1.8;
+}
+
+/* container holding all project requirements */
+.requirements-list {
+    max-width: 900px;
+}
+
+.requirement {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.requirement span {
+    color: #ffc72c;
+
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+/* requirement description */
+.requirement p {
+    margin: 0;
+
+    color: white;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* adds a bottom border to final requirement */
+.requirement:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --------------- ENVISIONED SOLUTION --------------- */
+
+/* section describing  planned PACE system */
+.envisioned-solution {
+    padding: 70px 0;
+    background-color: #0b0b0d;
+}
+
+/* main envisioned solution heading */
+.envisioned-solution h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+/* overview of how the system will work */
+.solution-description {
+    max-width: 800px;
+    margin: 0 0 35px;
+
+    color: #c7c7c7;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* temporary location for future system architecture diagram */
+.architecture-placeholder {
+    width: 100%;
+    max-width: 850px;
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px dashed #444444;
+}
+
+/* placeholder text */
+.architecture-placeholder p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* -------------- DEVELOPMENT PROCESS --------------- */
+
+/* section showing major stages of project development */
+.development-section {
+    padding: 80px 0;
+    background-color: #0b0b0d;
+}
+
+/* development process heading */
+.development-section h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+/* short explanation above the development stages */
+.development-intro {
+    max-width: 800px;
+    margin: 0 0 45px;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+/* places development stages next to each other */
+.development-process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* individual development stage */
+.development-step {
+    padding: 25px;
+
+    background-color: #151518;
+    border-top: 3px solid #ffc72c;
+}
+
+/* development stage number */
+.development-step span {
+    color: #ffc72c;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* development stage title */
+.development-step h3 {
+    margin: 15px 0 12px;
+
+    color: white;
+
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* development stage description */
+.development-step p {
+    margin: 0;
+
+    color: #c7c7c7;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* -------------- TECHNOLOGIES PAGE --------------- */
+
+/* intro at the top of the Technologies page */
+.technologies-intro {
+    padding: 70px 0 50px;
+    background-color: #0b0b0d;
+}
+
+/* main Technologies page heading */
+.technologies-intro h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+}
+
+/* intro paragraph */
+.technologies-intro p:last-child {
+    max-width: 750px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+/* -------------- TECHNOLOGY CARDS --------------- */
+
+/* main area containing the tech cards */
+.technologies-section {
+    padding: 40px 0 90px;
+    background-color: #0b0b0d;
+}
+
+/* displays technologies in a responsive grid */
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* individual technology */
+.technology-card {
+    padding: 30px;
+
+    background-color: #151518;
+    border-top: 3px solid #003466;
+}
+
+/* technology category */
+.technology-type {
+    margin: 0 0 15px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* technology name */
+.technology-card h3 {
+    margin: 0 0 15px;
+
+    color: white;
+
+    font-size: 1.5rem;
+}
+
+/* technology explanation */
+.technology-card p:last-child {
+    margin: 0;
+
+    color: #c7c7c7;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* --------------- TEAM PAGE --------------- */
+
+/* introduction at the top of the Team page */
+.team-intro {
+    padding: 70px 0 50px;
+    background-color: #0b0b0d;
+}
+
+.team-intro h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+}
+
+.team-intro p:last-child {
+    max-width: 750px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+
+/* ------------- TEAM MEMBERS ------------- */
+
+.team-section {
+    padding: 40px 0 90px;
+    background-color: #0b0b0d;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* individual team member */
+.team-card {
+    overflow: hidden;
+
+    background-color: #151518;
+    border-bottom: 3px solid #003466;
+}
+
+/* temporary area for team headshots */
+.headshot-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #202024;
+
+    color: #777777;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* text underneath each headshot */
+.team-info {
+    padding: 25px;
+}
+
+.team-role {
+    margin: 0 0 10px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.team-card h3 {
+    margin: 0 0 15px;
+
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+.team-bio {
+    margin: 0;
+
+    color: #c7c7c7;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ------------- PROJECT SUPPORT ------------- */
+
+.project-support {
+    padding: 75px 0 85px;
+    background-color: #003466;
+}
+
+.project-support h2 {
+    margin: 0 0 35px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* mentor and sponsor cards */
+.support-card {
+    padding: 30px;
+
+    background-color: rgba(0, 0, 0, 0.18);
+    border-top: 3px solid #ffc72c;
+}
+
+.support-type {
+    margin: 0 0 12px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.support-card h3 {
+    margin: 0 0 12px;
+
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+.support-card p:last-child {
+    margin: 0;
+
+    color: #f0f0f0;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ------------- PROGRESS PAGE ------------- */
+
+/* introduction at the top of the Progress page */
+.progress-intro {
+    padding: 70px 0 60px;
+    background-color: #0b0b0d;
+}
+
+.progress-intro h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+}
+
+.progress-intro p:last-child {
+    max-width: 750px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+/* ------------- PROJECT TIMELINE ------------- */
+.timeline-section {
+    padding: 60px 0 90px;
+    background-color: #0b0b0d;
+}
+
+.timeline-section h2 {
+    margin: 0 0 50px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+/* contains the vertical timeline */
+.timeline {
+    position: relative;
+    max-width: 850px;
+}
+
+/* blue line running through the timeline */
+.timeline::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+
+    width: 3px;
+
+    background-color: #003466;
+}
+
+/* individual timeline phase */
+.timeline-item {
+    position: relative;
+
+    padding: 0 0 55px 55px;
+}
+
+/* gold marker on the timeline */
+.timeline-marker {
+    position: absolute;
+    top: 5px;
+    left: 3px;
+
+    width: 17px;
+    height: 17px;
+
+    background-color: #ffc72c;
+    border-radius: 50%;
+}
+
+.timeline-phase {
+    margin: 0 0 10px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeline-content h3 {
+    margin: 0 0 12px;
+
+    color: white;
+
+    font-size: 1.5rem;
+}
+
+.timeline-content p:last-child {
+    max-width: 700px;
+    margin: 0;
+
+    color: #c7c7c7;
+
+    line-height: 1.7;
+}
+
+
+/* ---------------- CURRENT PROGRESS ---------------- */
+
+/* blue feature section for the Progress page */
+.current-progress {
+    padding: 75px 0 85px;
+    background-color: #003466;
+}
+
+.current-progress h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.progress-description {
+    max-width: 750px;
+    margin: 0 0 40px;
+
+    color: #f0f0f0;
+
+    line-height: 1.8;
+}
+
+.status-grid {
+    max-width: 900px;
+}
+
+/* individual current-status item */
+.status-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-item span {
+    color: #ffc72c;
+
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.status-item p {
+    margin: 0;
+
+    color: white;
+
+    line-height: 1.6;
+}
+
+
+/* -------------- RESOURCES & BUDGET -------------- */
+
+.resources-section {
+    padding: 80px 0;
+    background-color: #0b0b0d;
+}
+
+.resources-section h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.resources-section > .page-container > p:not(.section-label) {
+    max-width: 750px;
+
+    color: #c7c7c7;
+
+    line-height: 1.8;
+}
+
+/* temporary budget area */
+.budget-placeholder {
+    max-width: 850px;
+    min-height: 120px;
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px dashed #444444;
+
+    color: #777777;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* --------------- MORE PAGE ---------------- */
+
+.more-intro {
+    padding: 70px 0 60px;
+    background-color: #0b0b0d;
+}
+
+.more-intro h2 {
+    margin: 0 0 20px;
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+}
+
+.more-intro p:last-child {
+    max-width: 750px;
+    margin: 0;
+
+    color: #c7c7c7;
+    line-height: 1.8;
+}
+
+
+/* -------------- PROJECT LINKS -------------- */
+
+.project-links-section {
+    padding: 75px 0 85px;
+    background-color: #003466;
+}
+
+.project-links-section h2 {
+    margin: 0 0 35px;
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    padding: 30px;
+
+    background-color: rgba(0, 0, 0, 0.18);
+    border-top: 3px solid #ffc72c;
+}
+
+.resource-type {
+    margin: 0 0 12px;
+
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.resource-card h3 {
+    margin: 0 0 15px;
+
+    color: white;
+    font-size: 1.5rem;
+}
+
+.resource-card p:not(.resource-type) {
+    margin: 0 0 25px;
+
+    color: #f0f0f0;
+    line-height: 1.7;
+}
+
+.resource-link {
+    display: inline-block;
+
+    color: #ffc72c;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+
+/* -------------- DOCUMENTATION -------------- */
+
+.documentation-section {
+    padding: 80px 0;
+    background-color: #0b0b0d;
+}
+
+.documentation-section h2,
+.codebase-section h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+}
+
+.documentation-intro {
+    max-width: 750px;
+    margin: 0 0 40px;
+
+    color: #c7c7c7;
+    line-height: 1.8;
+}
+
+.document-list {
+    max-width: 900px;
+}
+
+.document-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #2c2c2c;
+}
+
+.document-item:last-child {
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.document-item > span {
+    color: #ffc72c;
+    font-weight: 900;
+}
+
+.document-item h3 {
+    margin: 0 0 8px;
+    color: white;
+}
+
+.document-item p {
+    margin: 0;
+
+    color: #c7c7c7;
+    line-height: 1.6;
+}
+
+
+/* ------------- CODEBASE ------------- */
+
+.codebase-section {
+    padding: 70px 0 90px;
+    background-color: #151518;
+}
+
+.codebase-section p:not(.section-label) {
+    max-width: 750px;
+    margin: 0 0 25px;
+
+    color: #c7c7c7;
+    line-height: 1.8;
+}
+
+/* used for links/resources that are not ready yet */
+.coming-soon {
+    color: #ffc72c;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
